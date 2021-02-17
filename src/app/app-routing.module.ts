@@ -27,6 +27,10 @@ const routes: Routes = [
     path: 'view-annonce/:id',
     loadChildren: () => import('./view-annonce/view-annonce.module').then( m => m.ViewAnnoncePageModule)
   },
+  {
+    path: 'list-posts',
+    loadChildren: () => import('./list-posts/list-posts.module').then( m => m.ListPostsPageModule)
+  }
 ];
 
 @NgModule({
