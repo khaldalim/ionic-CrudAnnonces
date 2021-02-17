@@ -1,0 +1,24 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+    <ion-title>annonce N°{{annonce.id}} </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-label>
+    <ul>
+      <li> ID :{{annonce.id}}</li>
+      <li> Nom :{{annonce.titre}}</li>
+      <li> Prenom :{{annonce.texte}}</li>
+      <li> Date :{{annonce.date}}</li>
+
+      <ion-button lines="full" (click)="this.updateForm(annonce)">Modifier</ion-button>
+      <ion-button lines="full" color="danger" (click)="this.annonceService.delete(annonce.id)"
+                  routerLink="/list-annonces" >Supprimer</ion-button>
+    </ul>
+
+  </ion-label>
+</ion-content>

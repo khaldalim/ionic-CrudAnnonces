@@ -1,0 +1,23 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+    <ion-title>liste des annonces</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-list>
+
+    <ion-item *ngFor="let annonce of annonces" (click)="afficherAnnonces(Number(annonce.id))">
+      <ion-label>
+        <h4>ID : {{annonce.id}}</h4>
+        <h4>titre :{{annonce.titre}}</h4>
+        <h4>texte :{{annonce.texte}}</h4>
+        <h4>date :{{annonce.date}}</h4>
+      </ion-label>
+
+    </ion-item>
+  </ion-list>
+</ion-content>
